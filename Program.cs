@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 
 namespace Labrob
 {
@@ -44,7 +44,7 @@ namespace Labrob
                     if (crossProduct != 0)
                     {
                         double ploshcha = CalcTriangleSquareByPoints(0, 0, a, b, x, y);
-                        if (ploshcha > 0 && ploshcha < minPloshcha)
+                        if (ploshcha < minPloshcha) //ploshcha > 0 буде виконуватися завдяки переверці за векторним добутком, проте можливо під час округлення може виникнути похибка. Перепитати
                         {
                             minPloshcha = ploshcha;
                             minX = x;
